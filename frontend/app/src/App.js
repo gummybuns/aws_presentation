@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  HashRouter,
-  Router as BaseRouter,
+  HashRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -10,8 +9,6 @@ import history from './history';
 
 import Home from './Home';
 import About from './About';
-
-const Router = process.env.NODE_ENV === 'production' ? BaseRouter : HashRouter;
 
 const App = () => (
   <Router history={history}>

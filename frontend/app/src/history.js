@@ -1,10 +1,7 @@
 import {
   createHashHistory,
-  createBrowserHistory,
 } from 'history';
 
-const history = process.env.NODE_ENV === 'production'
-  ? createBrowserHistory()
-  : createHashHistory();
+const history = createHashHistory();
 
 export default history;
