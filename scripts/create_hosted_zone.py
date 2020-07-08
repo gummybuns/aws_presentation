@@ -1,3 +1,17 @@
+"""
+Create a Hosted Zone in Route53
+
+It prints out the NS records for you to put in your DNS Provider. If there
+already exists a zone with that domain, it will print out the NS records
+regardless
+
+Arguments:
+    domain_name: The name root domain name you want in Route53
+
+Example::
+
+    python3 scripts/create_hosted_zone.py myuniquedomain.com
+"""
 import boto3
 import uuid
 import sys

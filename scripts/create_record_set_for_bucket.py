@@ -1,3 +1,21 @@
+"""
+Create the record set for a the S3 Bucket
+
+It will throw an error if the domain name doesnt match a hosted zone. I took
+some shortcuts making this script. First - it only works for US-East-1 region.
+This is because every region has a different ALIAS_ZONE_ID and corresponding
+DNSNAME. I took a shortcut to assume us-east-1 because i was lazy.
+
+Arguments:
+    hosted_zone - the root domain name
+    record_name - the domain/subdomain to be added
+
+Example::
+
+    python3 scripts/create_record_set_for_bucket.py \
+            realzacbrown.com \
+            test.realzacbrown.com
+"""
 import boto3
 import sys
 

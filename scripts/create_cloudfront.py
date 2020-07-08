@@ -3,12 +3,16 @@
 It will also associate the cloudfront distribution in S3 as an Alias A record
 to the specified domain_name
 
-Parameters:
+Arguments:
     domain_name: The name of both the bucket and the url of the website we are creating
     certificate_domain_name: The string that identifies the ssl cert in ACM that
         will be used for the the distribution. It could be the domain_name or
         maybe something like *.example.com
     hosted_zone: the name of the hosted zone to associate in s3
+
+Example::
+
+    python3 scripts/create_cloudfront.py example.mydomain.com *.mydomain.com mydomain.com
 """
 import boto3
 import sys

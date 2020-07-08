@@ -1,3 +1,16 @@
+"""
+Create an SSL Certificate in ACM
+
+It will continually print statements until the ssl is verified
+
+Arguments:
+    domain_name: The name of the domain used for the certificate
+    hosted_zone_name: The root domain where the records will be saved in Route53
+
+Example::
+
+    python3 scripts/create_ssl.py *.mydomain.com mydomain.com
+"""
 import boto3
 import sys
 from time import sleep
